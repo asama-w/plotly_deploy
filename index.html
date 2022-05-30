@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">Dashboard Home</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style="background-color:#F5EEF8">Belly Button Biodiversity Dashboard</h1>
+        <p style="background-color:#F5EEF8">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+
+    <!--Intro Section-->
+    <div class="row" id="intro" >
+      <div class="col-md-12">
+        <h2 style="text-align:center;">Welcome to The Belly Button's Bacterial Database<br>
+          <small>The colony of bacterial species from humane belly button that could make up an ideal synthesized beef!</small>  
+        </h2>
+        <article>
+          <div class="col-md-4 image" style="text-align:right;">
+            <img src="images/belly_button.jpeg" alt="Belly Button" height="45%" width="45%">
+          </div>
+
+          <div class="col-md-6">
+            <p style="text-align:left; font-size:16px">
+              Synthesizing a tasty beef with the bacterial species from the source as close as the one on our humane body? We might make this possible!   
+              <br><br>In partner with Improbable Beef, a rising food Startup, our laboratory has been collecting the bacterial species from various belly buttons of people across the country!
+              <br><br>This dashboard provides the visualization of the bacterial species found in each volunteer (refer by the ID), as well as their demographic info.<br>By selecting the Test Subject ID, we can access the visualizations of their belly button's bacterial colonies!
+            </p>
+          </div>
+        </article>
+      </div>
+      
+    </div>
+
+    <!--Dashboard Section-->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 style="text-align:left;">Visualizations of Bacterial Species per Test Subject<br>
+        <small>(Please select the test subject ID)</small></h2>
+      </div>
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div id="bar"></div>
+        <p><b>Note:</b> OTU = Operational Taxonomic Unit, (species or bacterial type)</p>
+      </div>
+      <div class="col-md-4">
+        <div id="gauge"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Bubble Chart</h4>
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+<footer style="font-size: 12px;">
+  <p>Image References:<p>
+  <p><a href="https://www.pexels.com/photo/art-pattern-abstract-design-6193935/">[1]</a>Header Photo by EKATERINA  BOLOVTSOVA: https://www.pexels.com/photo/art-pattern-abstract-design-6193935/</p>
+  <p><a href="https://www.impactlab.com/2011/07/03/human-belly-button-home-to-662-microbes-new-to-science">[2]</a>Belly Button Photo from https://www.impactlab.com/2011/07/03/human-belly-button-home-to-662-microbes-new-to-science
+</footer>
+</html>

@@ -1,0 +1,37 @@
+/*Style jumbotron element*/
+.jumbotron {
+    background-image: url("../images/heading_bg.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+body {
+    color: black;
+    background-color: hsl(270, 37%, 97%);
+
+}
+
+h2 {
+
+    color: hsl(204, 100%, 29%);
+    margin: 1em 0 0.5em;
+}
+
+article {
+    margin-top:50px;
+}
+
+row {
+    margin-top:50px;
+}
+
+
+footer {
+
+  position: relative;
+  margin-top:50px;
+  margin-left:25px;
+  text-align:left;
+
+}
+
